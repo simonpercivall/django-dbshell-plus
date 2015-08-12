@@ -24,7 +24,7 @@ def read_version():
 # NB: _don't_ add namespace_packages to setup(), it'll break
 #     everything using imp.find_module
 setup(
-    name='django_dbshell_plus',
+    name='django-dbshell-plus',
     version=read_version(),
     description='A dbshell_plus management command for Django that selects pgcli or mycli when available.',
     long_description=readme + '\n\n' + history,
@@ -37,7 +37,7 @@ setup(
     install_requires=read_reqs('requirements.txt'),
     license="BSD",
     zip_safe=False,
-    keywords='django_dbshell_plus',
+    keywords='django-dbshell-plus',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',
