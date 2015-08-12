@@ -4,13 +4,12 @@ help:
 	@echo "clean-build - remove build artifacts"
 	@echo "clean-pyc - remove Python file artifacts"
 	@echo "lint - check style with flake8"
-	@echo "test - run tests"
 	@echo "coverage - check code coverage quickly with the default Python"
 	@echo "docs - generate Sphinx HTML documentation, including API docs"
 	@echo "release - package and upload a release"
 	@echo "sdist - package"
 
-clean: clean-build clean-pyc
+clean: clean-build clean-pyc clean-docs
 	rm -fr htmlcov/
 
 clean-build:
@@ -27,13 +26,7 @@ clean-docs:
 	rm -f docs/django_dbshell_plus*.rst
 
 lint:
-	flake8 lib/django_dbshell_plus tests
-
-test:
-	tox
-
-coverage:
-	tox -e coverage
+	flake8 lib/django_dbshell_plus
 
 docs:
 	tox -e docs

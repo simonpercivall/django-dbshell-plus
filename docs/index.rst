@@ -12,7 +12,6 @@ Contents:
 
    installation
    usage
-   django_dbshell_plus
    contributing
    authors
    history

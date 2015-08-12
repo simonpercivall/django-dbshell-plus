@@ -2,6 +2,7 @@
 Usage
 =====
 
-To use Django DB Shell Plus in a project::
+Add `django_dbshell_plus` to installed apps in `settings.py`, then run::
 
-	import django_dbshell_plus
+    > ./manage.py dbshell_plus
+
