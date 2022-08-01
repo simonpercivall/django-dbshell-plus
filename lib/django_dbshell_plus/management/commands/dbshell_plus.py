@@ -1,8 +1,8 @@
 import errno
 import subprocess
 
-from django.db import connections
 from django.core.management.commands import dbshell
+from django.db import connections
 
 
 class Command(dbshell.Command):
@@ -20,7 +20,7 @@ class Command(dbshell.Command):
             try:
                 getattr(self, cmd)(connection)
                 return
-            except OSError, e:
+            except OSError as e:
                 if e.errno != errno.ENOENT:
                     self.stderr.write("Could not start %s: %s" % (cmd, str(e)))
 
